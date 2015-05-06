@@ -3,8 +3,10 @@
     <declare-styleable name="def">
         <attr name="def_theme" format="reference"></attr>
     </declare-styleable>
-    
+
+    <attr name="leftPadding" format="dimension"></attr>
+
     <declare-styleable name="MySlideMenuLayout">
-        <attr name="leftpadding" format="dimension"></attr>
+        <attr name="leftPadding" />
     </declare-styleable>
 </resources>

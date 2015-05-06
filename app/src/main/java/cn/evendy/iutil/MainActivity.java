@@ -11,8 +11,6 @@ import cn.evendy.iutil_lib.view.activity.BaseActivity;
  * @mail£º244085027@qq.com
  */
 public class MainActivity extends BaseActivity {
-    private MainFragment mainFragment;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
