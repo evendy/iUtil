@@ -12,34 +12,22 @@ import java.text.DecimalFormat;
  * @mail 244085027@qq.com
  */
 public class FileUtils {
-    private FileUtils(){}
-    /**
-     * 判断SD是否装载
-     *
-     * @return
-     */
-    public static boolean isSDCardExist() {
-        if (Environment.getExternalStorageState().equals(
-                Environment.MEDIA_MOUNTED)) {
-            return true;
-        }
-        return false;
+    private FileUtils() {
     }
 
     /**
      * 创建文件夹
      *
      * @param path
-     *
      */
     public static boolean createDirFile(String path) {
-        if(path==null||path.trim().equals(""))
+        if (path == null || path.trim().equals(""))
             return false;
         return createDirFile(new File(path));
     }
 
-    public static boolean createDirFile(File dir){
-        return createFile(dir)!=null;
+    public static boolean createDirFile(File dir) {
+        return createFile(dir) != null;
     }
 
     /**
@@ -49,21 +37,21 @@ public class FileUtils {
      * @return File
      */
     public static File createFile(String path) {
-        if(path==null||path.trim().equals(""))
+        if (path == null || path.trim().equals(""))
             return null;
         return createFile(new File(path));
     }
 
-    public static File createFile(File file){
+    public static File createFile(File file) {
         if (!file.exists()) {
             try {
                 boolean flag;
-                if(file.isDirectory()){
-                    flag=file.mkdirs();
-                }else{
-                    flag=file.createNewFile();
+                if (file.isDirectory()) {
+                    flag = file.mkdirs();
+                } else {
+                    flag = file.createNewFile();
                 }
-                if(flag){
+                if (flag) {
                     return file;
                 }
                 return null;
@@ -80,10 +68,9 @@ public class FileUtils {
      * 删除文件夹,包括内部的所有文件
      *
      * @param folderPath
-     *
      */
     public static boolean delFolder(String folderPath) {
-        if(folderPath==null||folderPath.trim().equals(""))
+        if (folderPath == null || folderPath.trim().equals(""))
             return false;
         return delFolder(new File(folderPath));
     }
@@ -105,11 +92,11 @@ public class FileUtils {
         if (!folder.isDirectory()) {
             return true;
         }
-        File[] files=folder.listFiles();
-        for(File child:files){
-            if(child.isDirectory()){
+        File[] files = folder.listFiles();
+        for (File child : files) {
+            if (child.isDirectory()) {
                 delFolder(child);
-            }else{
+            } else {
                 child.delete();
             }
         }
@@ -128,9 +115,9 @@ public class FileUtils {
         String fileSizeString = "unknowSize";
         if (size < 1024) {
             fileSizeString = df.format((double) size) + "B";
-        } else if (size < 1024*1024) {
+        } else if (size < 1024 * 1024) {
             fileSizeString = df.format((double) size / 1024) + "K";
-        } else if (size < 1024*1024*1024) {
+        } else if (size < 1024 * 1024 * 1024) {
             fileSizeString = df.format((double) size / 1048576) + "M";
         } else {
             fileSizeString = df.format((double) size / 1073741824) + "G";
@@ -147,7 +134,7 @@ public class FileUtils {
      */
     public static File getFilePath(String filePath, String fileName) {
         createDirFile(filePath);
-        return createFile(new File(filePath,fileName));
+        return createFile(new File(filePath, fileName));
     }
 
 }
