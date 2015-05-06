@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.evendy.iutil_lib.view.widget.MySlideMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@android:color/holo_blue_light"
+    app:rightPadding="100dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <include layout="@layout/view_menu" />
+
+        <LinearLayout
+            android:background="@android:color/holo_orange_light"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/menu_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="menu" />
+        </LinearLayout>
+    </LinearLayout>
+
+</cn.evendy.iutil_lib.view.widget.MySlideMenuLayout>

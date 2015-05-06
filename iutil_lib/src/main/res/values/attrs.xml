@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="def">
+        <attr name="def_theme" format="reference"></attr>
+    </declare-styleable>
+    
+    <declare-styleable name="MySlideMenuLayout">
+        <attr name="leftpadding" format="dimension"></attr>
+    </declare-styleable>
+</resources>
