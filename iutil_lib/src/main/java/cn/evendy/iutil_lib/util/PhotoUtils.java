@@ -115,7 +115,7 @@ public class PhotoUtils {
      * @return
      */
     public static String savePhotoToSDCard(Bitmap bitmap) {
-        if (!FileUtils.isSDCardExist()) {
+        if (!SDCardUtils.isSDCardExist()) {
             return null;
         }
         FileUtils.createDirFile(IMAGE_PATH);

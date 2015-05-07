@@ -4,9 +4,7 @@
         <attr name="def_theme" format="reference"></attr>
     </declare-styleable>
 
-    <attr name="leftPadding" format="dimension"></attr>
-
     <declare-styleable name="MySlideMenuLayout">
-        <attr name="leftPadding" />
+        <attr name="menuWidth" format="dimension" />
     </declare-styleable>
 </resources>

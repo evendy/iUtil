@@ -6,9 +6,9 @@ import android.view.Window;
 import cn.evendy.iutil_lib.view.activity.BaseActivity;
 
 /**
- * @author£ºevendy
+ * @author: evendy
  * @time: 2015/5/6 22:42
- * @mail£º244085027@qq.com
+ * @mail: 244085027@qq.com
  */
 public class MainActivity extends BaseActivity {
     @Override

@@ -13,13 +13,13 @@ import java.util.List;
 public abstract class CommonAdapter<T> extends BaseAdapter {
 
     private Context mContext;
-    private List<T> mData;//待填充的数据列表
-    private int itemLayoutId;//待填充的每一项的layoutId
+    private List<T> mData;//寰呰杞界殑鏁版嵁
+    private int itemLayoutId;//adapter鐨勬瘡涓�椤圭殑瑙嗗浘
 
     /**
      * @param context
-     * @param mData        待填充的数据列表
-     * @param itemLayoutId 待填充的每一项的layoutId
+     * @param mData        寰呰杞界殑鏁版嵁
+     * @param itemLayoutId adapter鐨勬瘡涓�椤圭殑瑙嗗浘
      */
     public CommonAdapter(Context context, List<T> mData, int itemLayoutId) {
         this.mContext = context;
