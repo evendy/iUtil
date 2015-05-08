@@ -45,8 +45,8 @@ import java.util.List;
 
 import cn.evendy.iutil_lib.R;
 import cn.evendy.iutil_lib.view.adapter.WheelAdapter;
-import cn.evendy.iutil_lib.view.listener.OnWheelChangedListener;
-import cn.evendy.iutil_lib.view.listener.OnWheelScrollListener;
+import cn.evendy.iutil_lib.listener.OnWheelChangedListener;
+import cn.evendy.iutil_lib.listener.OnWheelScrollListener;
 
 /**
  * Numeric wheel view.

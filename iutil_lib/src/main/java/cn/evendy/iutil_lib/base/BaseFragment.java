@@ -1,15 +1,12 @@
-package cn.evendy.iutil_lib.view.activity;
+package cn.evendy.iutil_lib.base;
 
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,6 +21,10 @@ public abstract class BaseFragment extends Fragment {
 
     public BaseFragment() {
         super();
+    }
+
+    protected Context getContext(){
+        return getActivity();
     }
 
     public BaseFragment(Application application, Activity activity,

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cn.evendy.iutil_lib.view.widget.FlowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:background="@drawable/radius_text"
+                android:layout_width="wrap_content"
+                android:text="uu"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:background="@drawable/radius_text"
+                android:layout_width="wrap_content"
+                android:text="uopuioiofsafa"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:background="@drawable/radius_text"
+                android:layout_width="wrap_content"
+                android:text="nlnlknl"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:background="@drawable/radius_text"
+                android:layout_width="wrap_content"
+                android:text="ipoipjkpppppuiouojkijlk"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:background="@drawable/radius_text"
+                android:layout_width="wrap_content"
+                android:text="jslakfjlasjflakfffff"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content" />
+        </cn.evendy.iutil_lib.view.widget.FlowLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 import cn.evendy.iutil_lib.R;
 import cn.evendy.iutil_lib.view.adapter.NumericWheelAdapter;
-import cn.evendy.iutil_lib.view.listener.OnWheelScrollListener;
+import cn.evendy.iutil_lib.listener.OnWheelScrollListener;
 import cn.evendy.iutil_lib.view.widget.WheelView;
 
 public class WhellTimePickerDialog extends BaseDialog {

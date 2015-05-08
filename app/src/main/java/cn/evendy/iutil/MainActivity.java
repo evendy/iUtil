@@ -1,9 +1,14 @@
 package cn.evendy.iutil;
 
 import android.os.Bundle;
-import android.view.Window;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.view.Menu;
+import android.view.MenuItem;
 
-import cn.evendy.iutil_lib.view.activity.BaseActivity;
+import cn.evendy.iutil_lib.base.BaseActivity;
+import cn.evendy.iutil_lib.base.BaseFragment;
+
 
 /**
  * @author: evendy
@@ -14,9 +19,24 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.main_activity);
-        MainFragment fragment = new MainFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.content, fragment).commit();
+        setContentView(R.layout.activity_main);
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        MainFragment main = new MainFragment();
+        fragmentTransaction.replace(R.id.content, main, "mainFragment");
+        fragmentTransaction.commit();
+    }
+
+    public void loadFragment(BaseFragment fragment, Bundle bundle) {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        if (bundle != null)
+            fragment.setArguments(bundle);
+        fragmentTransaction.replace(R.id.content, fragment);
+        fragmentTransaction.addToBackStack(null).commit();
+    }
+
+    public void loadFragment(BaseFragment fragment) {
+        loadFragment(fragment, null);
     }
 }

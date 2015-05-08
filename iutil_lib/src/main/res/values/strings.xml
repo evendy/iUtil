@@ -6,4 +6,5 @@
     <string name="xlistview_header_hint_ready">松开刷新数据</string>
     <string name="xlistview_header_hint_loading">正在加载&#8230;</string>
     <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="pwd_hint">输入密码</string>
 </resources>

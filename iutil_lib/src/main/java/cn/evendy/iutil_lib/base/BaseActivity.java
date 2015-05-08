@@ -1,4 +1,4 @@
-package cn.evendy.iutil_lib.view.activity;
+package cn.evendy.iutil_lib.base;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;

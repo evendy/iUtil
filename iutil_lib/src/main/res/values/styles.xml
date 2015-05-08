@@ -21,4 +21,30 @@
         <item name="android:minHeight">40.0dip</item>
     </style>
 
+    <style name="menuStyle_other">
+        <item name="android:layout_width">@dimen/menu_size</item>
+        <item name="android:layout_height">@dimen/menu_size</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="menuStyle" parent="menuStyle_other">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/circlebtn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/menu_textColor</item>
+    </style>
+
+    <style name="pwd_show">
+        <item name="android:maxLength">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:password">true</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>

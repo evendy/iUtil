@@ -38,7 +38,7 @@ public class MySlideMenuLayout extends HorizontalScrollView {
     public MySlideMenuLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         mScreenWidth = ScreenUtils.getScreenWidth(context);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MySlideMenuLayout, R.styleable.def_def_theme, 0);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MySlideMenuLayout, R.styleable.def_def_attr, 0);
         mMenuWidth = (int) typedArray.getDimension(R.styleable.MySlideMenuLayout_menuWidth, PixelUtils.px2dp(context, defMenuWidth));
 
         typedArray.recycle();

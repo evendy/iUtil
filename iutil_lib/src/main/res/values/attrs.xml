@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <declare-styleable name="def">
-        <attr name="def_theme" format="reference"></attr>
+        <attr name="def_attr" format="reference"></attr>
     </declare-styleable>
 
     <declare-styleable name="MySlideMenuLayout">
         <attr name="menuWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="VoiceImage">
+        <attr name="circleColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="progress" format="integer"/>
+        <attr name="vIcon" format="reference"/>
+        <attr name="ringWidth" format="dimension"/>
+        <attr name="count" format="integer"/>
+        <attr name="split" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="NumberView">
+        <attr name="text" format="string"></attr>
+        <attr name="textSize" format="dimension"></attr>
     </declare-styleable>
 </resources>
