@@ -31,5 +31,4 @@ Thumbs.db
 .gradle
 build/
 
-app/app.iml
-iutil_lib/iutil_lib.iml
+*.iml
