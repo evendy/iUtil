@@ -20,6 +20,7 @@ import cn.evendy.iutil.fragment.ORMLiteFragment;
 import cn.evendy.iutil.fragment.PropertyAnimationFragment;
 import cn.evendy.iutil.fragment.PwdLockFragment;
 import cn.evendy.iutil.fragment.VoiceImageFragment;
+import cn.evendy.iutil.fragment.VolleyFragment;
 import cn.evendy.iutil.fragment.XMLParseFragment;
 import cn.evendy.iutil_lib.base.BaseFragment;
 
@@ -41,7 +42,8 @@ public class MainFragment extends BaseFragment implements AdapterView.OnItemClic
             "MyViewGroupFragment",
             "FlowLayoutFragment",
             "ORMLiteFragment",
-            "MySlideMenuLayoutFragment"
+            "MySlideMenuLayoutFragment",
+            "VolleyFragment"
     };
 
     @Override
@@ -107,8 +109,12 @@ public class MainFragment extends BaseFragment implements AdapterView.OnItemClic
                 baseFragment = new ORMLiteFragment();
                 break;
             }
-            case 9:{
-                baseFragment=new MySlideMenuLayoutFragment();
+            case 9: {
+                baseFragment = new MySlideMenuLayoutFragment();
+                break;
+            }
+            case 10: {
+                baseFragment = new VolleyFragment();
                 break;
             }
         }
