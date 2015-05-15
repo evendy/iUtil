@@ -16,17 +16,24 @@ public class ScreenUtils {
     }
 
     /**
+     * 获得屏幕信息
+     */
+    public static DisplayMetrics getScreenInfo(Context context) {
+        WindowManager wm = (WindowManager) context
+                .getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(outMetrics);
+        return outMetrics;
+    }
+
+    /**
      * 获得屏幕高度
      *
      * @param context
      * @return
      */
     public static int getScreenWidth(Context context) {
-        WindowManager wm = (WindowManager) context
-                .getSystemService(Context.WINDOW_SERVICE);
-        DisplayMetrics outMetrics = new DisplayMetrics();
-        wm.getDefaultDisplay().getMetrics(outMetrics);
-        return outMetrics.widthPixels;
+        return getScreenInfo(context).widthPixels;
     }
 
     /**
@@ -36,11 +43,7 @@ public class ScreenUtils {
      * @return
      */
     public static int getScreenHeight(Context context) {
-        WindowManager wm = (WindowManager) context
-                .getSystemService(Context.WINDOW_SERVICE);
-        DisplayMetrics outMetrics = new DisplayMetrics();
-        wm.getDefaultDisplay().getMetrics(outMetrics);
-        return outMetrics.heightPixels;
+        return getScreenInfo(context).heightPixels;
     }
 
     /**
@@ -50,7 +53,6 @@ public class ScreenUtils {
      * @return
      */
     public static int getStatusHeight(Context context) {
-
         int statusHeight = -1;
         try {
             Class<?> clazz = Class.forName("com.android.internal.R$dimen");
