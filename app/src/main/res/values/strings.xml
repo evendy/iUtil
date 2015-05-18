@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">iUtil</string>
+    <string name="tab_home">首页</string>
 </resources>

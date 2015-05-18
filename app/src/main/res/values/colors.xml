@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_menu_text_hover">#FD4682</color>
+    <color name="tab_menu_text_norm">#797D82</color>
+</resources>

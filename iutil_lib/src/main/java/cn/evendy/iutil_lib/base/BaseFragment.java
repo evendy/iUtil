@@ -13,25 +13,10 @@ import java.util.Iterator;
 import java.util.List;
 
 public abstract class BaseFragment extends Fragment {
-    protected Activity mActivity;
-    protected Context mContext;
-    protected Application mApplication;
+    protected List<AsyncTask> mAsyncTasks = new ArrayList<AsyncTask>();
 
-    protected List<AsyncTask<Void, Void, Boolean>> mAsyncTasks = new ArrayList<AsyncTask<Void, Void, Boolean>>();
-
-    public BaseFragment() {
-        super();
-    }
-
-    protected Context getContext(){
+    protected Context getContext() {
         return getActivity();
-    }
-
-    public BaseFragment(Application application, Activity activity,
-                        Context context) {
-        mApplication = application;
-        mActivity = activity;
-        mContext = context;
     }
 
     @Override
@@ -46,15 +31,15 @@ public abstract class BaseFragment extends Fragment {
         return (V) getView().findViewById(id);
     }
 
-    protected void putAsyncTask(AsyncTask<Void, Void, Boolean> asyncTask) {
+    protected void putAsyncTask(AsyncTask asyncTask) {
         mAsyncTasks.add(asyncTask.execute());
     }
 
     protected void clearAsyncTask() {
-        Iterator<AsyncTask<Void, Void, Boolean>> iterator = mAsyncTasks
+        Iterator<AsyncTask> iterator = mAsyncTasks
                 .iterator();
         while (iterator.hasNext()) {
-            AsyncTask<Void, Void, Boolean> asyncTask = iterator.next();
+            AsyncTask asyncTask = iterator.next();
             if (asyncTask != null && !asyncTask.isCancelled()) {
                 asyncTask.cancel(true);
             }
@@ -67,7 +52,11 @@ public abstract class BaseFragment extends Fragment {
      */
     protected void startActivity(Class<?> cls) {
         Intent intent = new Intent();
-        intent.setClass(mContext, cls);
+        intent.setClass(getContext(), cls);
         startActivity(intent);
+    }
+
+    protected <V extends View> V findViewbyId(int viewRes) {
+        return (V) findViewById(viewRes);
     }
 }
