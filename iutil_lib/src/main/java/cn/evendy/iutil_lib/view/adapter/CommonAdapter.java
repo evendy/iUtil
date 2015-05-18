@@ -7,6 +7,8 @@ import android.widget.BaseAdapter;
 
 import java.util.List;
 
+import cn.evendy.iutil_lib.view.viewholder.ViewHolder;
+
 /**
  * Created by evendy on 2015/5/6.
  */

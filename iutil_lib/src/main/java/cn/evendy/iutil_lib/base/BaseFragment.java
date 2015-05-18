@@ -1,7 +1,5 @@
 package cn.evendy.iutil_lib.base;
 
-import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
