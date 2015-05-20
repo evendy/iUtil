@@ -26,8 +26,8 @@ public class TabMenuItem {
     public View getView() {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         View menuItem = layoutInflater.inflate(R.layout.view_tabmenu_item, null);
-        ImageView menuIcon = findViewById(menuItem, R.id.tab_menu_icon);
-        TextView menuName = findViewById(menuItem, R.id.tab_menu_name);
+        ImageView menuIcon = findViewById(menuItem, R.id.item_icon);
+        TextView menuName = findViewById(menuItem, R.id.item_name);
         menuIcon.setImageResource(menuIconRes);
         menuName.setText(menuNameRes);
         return menuItem;
