@@ -60,8 +60,7 @@ public class AdViewPagerAdapter extends PagerAdapter {
     }
 
     public void setShowItemClickListener(ShowItemClickListener listener) {
-        this.listener = listener;
-    }
+        this.listener = listener;    }
 
     private List<GridView> getAdvisementGrid(int row, int column) {
         List<GridView> pageGrid = new ArrayList<GridView>();

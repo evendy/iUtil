@@ -13,10 +13,12 @@ import java.util.List;
 
 import cn.evendy.iutil.fragment.DialogFragment;
 import cn.evendy.iutil.fragment.FlowLayoutFragment;
+import cn.evendy.iutil.fragment.FrescoFragment;
 import cn.evendy.iutil.fragment.GalleryFragment;
 import cn.evendy.iutil.fragment.MySlideMenuLayoutFragment;
 import cn.evendy.iutil.fragment.MyViewgroupFragment;
 import cn.evendy.iutil.fragment.ORMLiteFragment;
+import cn.evendy.iutil.fragment.PicassoFragment;
 import cn.evendy.iutil.fragment.PropertyAnimationFragment;
 import cn.evendy.iutil.fragment.PwdLockFragment;
 import cn.evendy.iutil.fragment.SelectMenuBarFragment;
@@ -47,7 +49,9 @@ public class MainFragment extends BaseFragment implements AdapterView.OnItemClic
             "MySlideMenuLayoutFragment",
             "VolleyFragment",
             "SelectMenuBarFragment",
-            "viewpagerFragment"
+            "viewpagerFragment",
+            "PicassoFragment",
+            "FrescoFragment"
     };
 
     @Override
@@ -127,6 +131,14 @@ public class MainFragment extends BaseFragment implements AdapterView.OnItemClic
             }
             case 12: {
                 baseFragment = new ViewpagerFragment();
+                break;
+            }
+            case 13: {
+                baseFragment = new PicassoFragment();
+                break;
+            }
+            case 14: {
+                baseFragment = new FrescoFragment();
                 break;
             }
 
